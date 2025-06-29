@@ -1,0 +1,112 @@
+$color-white: #fff;
+$color-white-80: rgba(255, 255, 255, 0.8);
+$color-white-16: rgba(255, 255, 255, 0.16);
+$color-white-08: rgba(255, 255, 255, 0.08);
+
+$color-light-gray: #f5f7fb;
+$color-dark-gray: #212121;
+$color-dark-gray-80: rgba(33, 33, 33, 0.8);
+$color-dark-gray-60: rgba(33, 33, 33, 0.6);
+$color-dark-gray-24: rgba(33, 33, 33, 0.24);
+$color-dark-gray-16: rgba(33, 33, 33, 0.16);
+$color-dark-gray-08: rgba(33, 33, 33, 0.08);
+
+$color-blue: #c9d2ea;
+$color-dark-blue: #416edf;
+$color-dark-blue-60: rgba(65, 110, 223, 0.6);
+
+$color-yellow: #ffce31;
+
+$color-fire-tag: #ff6464;
+$color-fire-background: #eb6c6c;
+
+$color-bug-tag: #c9ff84;
+$color-bug-background: #91ac22;
+
+$color-water-tag: #9ff3ff;
+$color-water-background: #009acb;
+
+$color-flying-tag: linear-gradient(to bottom, #cbe9ff 0%, #29e);
+$color-flying-background: linear-gradient(to bottom, #cbe9ff 0%, #29e);
+
+$color-poison-tag: #d89cfd;
+$color-poison-background: #7e00cb;
+
+$color-normal-tag: #cbcbcb;
+$color-normal-background: #b6b6b6;
+
+$color-rock-tag: #cfc06f;
+$color-rock-background: #857d57;
+
+$color-ground-tag: #ffbf72;
+$color-ground-background: #a77437;
+
+$color-fighting-tag: #ff699f;
+$color-fighting-background: #ba114e;
+
+$color-ghost-tag: #b592ff;
+$color-ghost-background: #6b2bf1;
+
+$color-psychic-tag: #ff5e60;
+$color-psychic-background: #c4484a;
+
+$color-ice-tag: #aefff4;
+$color-ice-background: #3a9d90;
+
+$color-dragon-tag: #87c5ff;
+$color-dragon-background: #1268b8;
+
+$color-dark-tag: #8f8f8f;
+$color-dark-background: #373737;
+
+$color-fairy-tag: #ffa2e3;
+$color-fairy-background: #c01a8d;
+
+$color-electric-tag: #fffa86;
+$color-electric-background: #b7b117;
+
+$color-steel-tag: #a4ffe9;
+$color-steel-background: #448f85;
+
+$color-grass-tag: #80e177;
+$color-grass-background: #1eba11;
+
+@mixin typography-heading-l {
+	font-size: 48px;
+	font-weight: bold;
+	letter-spacing: 2.4px;
+}
+
+@mixin typography-heading-m {
+	font-size: 28px;
+	font-weight: bold;
+}
+
+@mixin typography-heading-s {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+@mixin typography-body {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+@mixin typography-body-2 {
+	font-size: 16px;
+	font-weight: 500;
+}
+
+@mixin typography-subtext {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+@mixin typography-subtext-2 {
+	font-size: 14px;
+}
+
+@mixin typography-button {
+	font-size: 16px;
+	font-weight: bold;
+}

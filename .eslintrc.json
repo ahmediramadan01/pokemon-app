@@ -1,0 +1,11 @@
+{
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaVersion": 2015
+	},
+	"rules": {
+		"no-undef": "warn",
+		"no-console": "warn",
+		"no-unused-vars": "warn"
+	}
+}

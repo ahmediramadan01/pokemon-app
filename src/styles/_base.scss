@@ -1,0 +1,22 @@
+@use "./abstracts" as *;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	min-height: 100vh;
+	font-family: "Roboto", sans-serif;
+	background-color: $color-light-gray;
+}
+
+.container {
+	max-width: 1384px;
+	margin: 0 auto;
+}
