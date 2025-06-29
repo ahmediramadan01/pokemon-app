@@ -1,0 +1,68 @@
+@use "./abstracts" as *;
+
+.header {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+
+	&__logo {
+		width: 296px;
+		height: auto;
+	}
+}
+
+#search-form {
+	padding: 8px 8px 8px 16px;
+	border-radius: 16px;
+	box-shadow: 0 11px 20px 0 rgba(145, 145, 145, 0.16);
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+
+	&:has(input:focus) {
+		outline: solid 1px #416edf;
+	}
+
+	& img {
+		width: 20px;
+		height: 20px;
+		filter: invert(38%) sepia(88%) saturate(576%) hue-rotate(188deg) brightness(92%) contrast(99%);
+	}
+
+	& input {
+		@include typography-body-2;
+		color: $color-dark-blue;
+		outline: none;
+		border: none;
+		flex-grow: 1;
+
+		&::placeholder {
+			color: inherit;
+		}
+
+		&:focus {
+			&::placeholder {
+				color: $color-dark-blue-60;
+			}
+		}
+	}
+
+	& button {
+		padding: 12px 50px;
+	}
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#sort {
+	@include typography-subtext;
+	padding: 12px 16px;
+	border-radius: 8px;
+	border: solid 2px $color-dark-gray-16;
+	background-color: $color-white;
+}

@@ -7,6 +7,27 @@
 		<link rel="shortcut icon" href="./assets/icons/logo.svg" type="image/x-icon" />
 	</head>
 	<body>
-		<div class="container"></div>
+		<div class="container">
+			<header class="header">
+				<img src="./assets/icons/Pokedex-logo.svg" alt="Pokedex logo" class="header__logo" />
+				<form id="search-form">
+					<label for="search"><img src="./assets/icons/search.svg" alt="Search icon" /></label>
+					<input type="search" name="search" id="search" placeholder="Pokemon name, number or type" />
+					<button class="button button--secondary">Search</button>
+				</form>
+				<nav class="nav">
+					<select id="sort">
+						<option value="" selected>Sort by</option>
+						<option value="">Lowest Number First</option>
+						<option value="">Highest Number First</option>
+						<option value="">Alphabetically (A-Z)</option>
+						<option value="">Alphabetically (Z-A)</option>
+					</select>
+					<button class="button button--outline button--filter-show">
+						<img src="./assets/icons/filter.svg" alt="Filter icon" /> <span>Filters</span>
+					</button>
+				</nav>
+			</header>
+		</div>
 	</body>
 </html>

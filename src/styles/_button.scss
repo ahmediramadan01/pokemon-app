@@ -1,0 +1,38 @@
+@use "./abstracts" as *;
+
+.button {
+	cursor: pointer;
+	outline: none;
+	border: none;
+	background: none;
+	border-radius: 8px;
+	color: $color-dark-blue;
+	@include typography-button;
+
+	&--primary {
+		background-color: $color-blue;
+	}
+
+	&--secondary {
+		background-color: $color-yellow;
+	}
+
+	&--outline {
+		border: solid 1px $color-dark-blue;
+	}
+
+	&--filter-show {
+		color: black;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		padding: 12px 24px;
+		border-radius: 999px;
+		border: solid 2px $color-dark-gray-16;
+		background-color: $color-white;
+
+		& img {
+			width: 16px;
+		}
+	}
+}
