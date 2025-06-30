@@ -14,6 +14,15 @@ body {
 	min-height: 100vh;
 	font-family: "Roboto", sans-serif;
 	background-color: $color-light-gray;
+	transition: all 1s ease;
+
+	&:has(:popover-open) {
+		background-color: $color-dark-gray-16;
+	}
+}
+
+ul {
+	list-style: none;
 }
 
 .container {

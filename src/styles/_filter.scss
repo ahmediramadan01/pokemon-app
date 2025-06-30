@@ -1,0 +1,170 @@
+@use "./abstracts" as *;
+
+.filter {
+	display: flex;
+	flex-direction: column;
+	inset: unset;
+	border: none;
+	right: 0;
+	width: 336px;
+	height: 100vh;
+	padding: 24px 0;
+	background-color: $color-light-gray;
+
+	transform: translateX(100%);
+
+	transition: all 0.5s allow-discrete;
+
+	&:popover-open {
+		transform: translateX(0);
+	}
+
+	@starting-style {
+		&:popover-open {
+			transform: translateX(100%);
+		}
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 21px 18px 18px;
+	}
+
+	&__heading {
+		@include typography-body;
+	}
+
+	hr {
+		background-color: $color-dark-gray-24;
+	}
+
+	&__types {
+		padding: 20px 18px 0 18px;
+		margin-bottom: 24px;
+	}
+
+	&__subheading {
+		color: $color-dark-gray-60;
+		@include typography-body-2;
+		margin-bottom: 18px;
+	}
+
+	&__types-list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 17px;
+	}
+
+	&__types-item {
+		&:nth-child(even) {
+			margin-left: 18px;
+		}
+	}
+
+	&__type {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		position: relative;
+		padding-left: 32px;
+		user-select: none;
+	}
+
+	&__type input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+	}
+
+	&__checkmark {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 20px;
+		width: 20px;
+		background-color: $color-white;
+		border: solid 2px $color-dark-gray;
+		border-radius: 2px;
+	}
+
+	&__type input:checked ~ &__checkmark {
+		background-color: $color-blue;
+		border: none;
+	}
+
+	&__checkmark:after {
+		content: "";
+		position: absolute;
+		display: none;
+	}
+
+	input:checked ~ &__checkmark:after {
+		display: block;
+	}
+
+	&__checkmark:after {
+		left: 7px;
+		top: 3px;
+		width: 4px;
+		height: 8px;
+		border: solid $color-dark-gray;
+		border-width: 0 3px 3px 0;
+		transform: rotate(45deg);
+	}
+
+	&__radios {
+		padding: 0 18px;
+		margin-bottom: 34px;
+	}
+
+	&__radio-list {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+	}
+
+	&__radio {
+		width: 48px;
+		height: 48px;
+		cursor: pointer;
+		position: relative;
+		background-color: $color-dark-gray-16;
+		padding: 10px;
+		border-radius: 8px;
+		transition: all 0.2s;
+
+		&:hover,
+		&:has(input:checked),
+		&:has(input:focus) {
+			background-color: $color-blue;
+		}
+
+		input {
+			position: absolute;
+			opacity: 0;
+		}
+
+		img {
+			width: 28px;
+			height: 28px;
+			transform: translateY(25%);
+		}
+	}
+
+	&__buttons {
+		flex-grow: 1;
+		display: flex;
+		gap: 16px;
+		padding: 0 18px;
+		justify-content: center;
+		align-items: end;
+
+		button {
+			padding: 12px 24px;
+		}
+	}
+}

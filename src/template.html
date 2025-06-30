@@ -23,9 +23,187 @@
 						<option value="">Alphabetically (A-Z)</option>
 						<option value="">Alphabetically (Z-A)</option>
 					</select>
-					<button class="button button--outline button--filter-show">
-						<img src="./assets/icons/filter.svg" alt="Filter icon" /> <span>Filters</span>
+					<button
+						popovertarget="filter"
+						class="button button--outline button--filter-show"
+						popovertargetaction="show">
+						<img src="./assets/icons/filter.svg" alt="Filter icon" /><span>Filters</span>
 					</button>
+					<form id="filter" class="filter" popover>
+						<header class="filter__header">
+							<h2 class="filter__heading">Filters</h2>
+							<button
+								popovertarget="filter"
+								class="button button--filter-hide"
+								popovertargetaction="hide">
+								<img src="./assets/icons/close.svg" alt="Close icon" />
+							</button>
+						</header>
+						<hr />
+						<div class="filter__types">
+							<h3 class="filter__subheading">Type</h3>
+							<ul class="filter__types-list">
+								<li class="filter__types-item">
+									<label class="filter__type">
+										<input type="checkbox" value="norma" />
+										<span class="filter__checkmark"></span>Normal
+									</label>
+								</li>
+								<li class="filter__types-item">
+									<label class="filter__type">
+										<input type="checkbox" value="dragon" />
+										<span class="filter__checkmark"></span>Dragon
+									</label>
+								</li>
+								<li class="filter__types-item">
+									<label class="filter__type">
+										<input type="checkbox" value="fighting" />
+										<span class="filter__checkmark"></span>Fighting
+									</label>
+								</li>
+								<li class="filter__types-item">
+									<label class="filter__type">
+										<input type="checkbox" value="dark" />
+										<span class="filter__checkmark"></span>Dark
+									</label>
+								</li>
+								<li class="filter__types-item">
+									<label class="filter__type">
+										<input type="checkbox" value="flying" />
+										<span class="filter__checkmark"></span>Flying
+									</label>
+								</li>
+								<li class="filter__types-item">
+									<label class="filter__type">
+										<input type="checkbox" value="fairy" />
+										<span class="filter__checkmark"></span>Fairy
+									</label>
+								</li>
+								<li class="filter__types-item">
+									<label class="filter__type">
+										<input type="checkbox" value="poison" />
+										<span class="filter__checkmark"></span>Poison
+									</label>
+								</li>
+								<li class="filter__types-item">
+									<label class="filter__type">
+										<input type="checkbox" value="electric" />
+										<span class="filter__checkmark"></span>Electric
+									</label>
+								</li>
+								<li class="filter__types-item">
+									<label class="filter__type">
+										<input type="checkbox" value="ground" />
+										<span class="filter__checkmark"></span>Ground
+									</label>
+								</li>
+								<li class="filter__types-item">
+									<label class="filter__type">
+										<input type="checkbox" value="rock" />
+										<span class="filter__checkmark"></span>Rock
+									</label>
+								</li>
+								<li class="filter__types-item">
+									<label class="filter__type">
+										<input type="checkbox" value="steel" />
+										<span class="filter__checkmark"></span>Steel
+									</label>
+								</li>
+								<li class="filter__types-item">
+									<label class="filter__type">
+										<input type="checkbox" value="bug" />
+										<span class="filter__checkmark"></span>Bug
+									</label>
+								</li>
+								<li class="filter__types-item">
+									<label class="filter__type">
+										<input type="checkbox" value="fire" />
+										<span class="filter__checkmark"></span>Fire
+									</label>
+								</li>
+								<li class="filter__types-item">
+									<label class="filter__type">
+										<input type="checkbox" value="ghost" />
+										<span class="filter__checkmark"></span>Ghost
+									</label>
+								</li>
+								<li class="filter__types-item">
+									<label class="filter__type">
+										<input type="checkbox" value="water" />
+										<span class="filter__checkmark"></span>Water
+									</label>
+								</li>
+								<li class="filter__types-item">
+									<label class="filter__type">
+										<input type="checkbox" value="psychic" />
+										<span class="filter__checkmark"></span>Psychic
+									</label>
+								</li>
+								<li class="filter__types-item">
+									<label class="filter__type">
+										<input type="checkbox" value="grass" />
+										<span class="filter__checkmark"></span>Grass
+									</label>
+								</li>
+								<li class="filter__types-item">
+									<label class="filter__type">
+										<input type="checkbox" value="ice" />
+										<span class="filter__checkmark"></span>Ice
+									</label>
+								</li>
+							</ul>
+						</div>
+						<div class="filter__radios">
+							<h3 class="filter__subheading">Height</h3>
+							<ul class="filter__radio-list">
+								<li class="filter__radio-item">
+									<label class="filter__radio">
+										<input type="radio" name="height" value="small-height" />
+										<img src="./assets/icons/small-height.svg" alt="Small height icon" />
+									</label>
+								</li>
+								<li class="filter__radio-item">
+									<label class="filter__radio">
+										<input type="radio" name="height" value="medium-height" />
+										<img src="./assets/icons/medium-height.svg" alt="Medium height icon" />
+									</label>
+								</li>
+								<li class="filter__radio-item">
+									<label class="filter__radio">
+										<input type="radio" name="height" value="large-height" />
+										<img src="./assets/icons/large-height.svg" alt="Large height icon" />
+									</label>
+								</li>
+							</ul>
+						</div>
+						<div class="filter__radios">
+							<h3 class="filter__subheading">Weight</h3>
+							<ul class="filter__radio-list">
+								<li class="filter__radio-item">
+									<label class="filter__radio">
+										<input type="radio" name="weight" value="small-weight" />
+										<img src="./assets/icons/small-weight.svg" alt="Small weight icon" />
+									</label>
+								</li>
+								<li class="filter__radio-item">
+									<label class="filter__radio">
+										<input type="radio" name="weight" value="medium-weight" />
+										<img src="./assets/icons/medium-weight.svg" alt="Medium weight icon" />
+									</label>
+								</li>
+								<li class="filter__radio-item">
+									<label class="filter__radio">
+										<input type="radio" name="weight" value="large-weight" />
+										<img src="./assets/icons/large-weight.svg" alt="Large weight icon" />
+									</label>
+								</li>
+							</ul>
+						</div>
+						<div class="filter__buttons">
+							<button class="button button--outline" type="reset">Reset filter</button>
+							<button class="button button--primary" type="button">Apply filter</button>
+						</div>
+					</form>
 				</nav>
 			</header>
 		</div>
