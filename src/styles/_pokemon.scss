@@ -1,0 +1,49 @@
+@use "./abstracts" as *;
+
+.pokemon {
+	&__card {
+		width: 322px;
+		height: 260px;
+		padding: 24px;
+		border-radius: 6px;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: end;
+	}
+
+	&__image {
+		width: 180px;
+		height: 180px;
+		position: absolute;
+		top: -100%;
+		left: 50%;
+		transform: translate(-50%, 100%);
+	}
+
+	&__name {
+		@include typography-heading-m;
+		color: $color-white;
+		margin-bottom: 8px;
+	}
+
+	&__id {
+		@include typography-heading-s;
+		color: $color-white-80;
+		margin-bottom: 20px;
+	}
+
+	&__types {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+
+	&__type {
+		padding: 8px 12px;
+		border-radius: 999px;
+		display: flex;
+		align-items: center;
+		gap: 5px;
+	}
+}

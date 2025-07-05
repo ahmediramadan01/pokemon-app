@@ -17,11 +17,10 @@
 				</form>
 				<nav class="nav">
 					<select id="sort">
-						<option value="" selected>Sort by</option>
-						<option value="">Lowest Number First</option>
-						<option value="">Highest Number First</option>
-						<option value="">Alphabetically (A-Z)</option>
-						<option value="">Alphabetically (Z-A)</option>
+						<option value="lowest" selected>Lowest Number First</option>
+						<option value="highest">Highest Number First</option>
+						<option value="ascending">Alphabetically (A-Z)</option>
+						<option value="descending">Alphabetically (Z-A)</option>
 					</select>
 					<button
 						popovertarget="filter"
@@ -45,7 +44,7 @@
 							<ul class="filter__types-list">
 								<li class="filter__types-item">
 									<label class="filter__type">
-										<input type="checkbox" value="norma" />
+										<input type="checkbox" value="normal" />
 										<span class="filter__checkmark"></span>Normal
 									</label>
 								</li>
@@ -206,6 +205,7 @@
 					</form>
 				</nav>
 			</header>
+			<main class="main"></main>
 		</div>
 	</body>
 </html>
