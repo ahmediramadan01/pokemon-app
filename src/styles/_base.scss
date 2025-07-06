@@ -37,7 +37,6 @@ ul {
 	flex-grow: 1;
 	margin-top: 102px;
 	display: grid;
-	align-content: center;
 	justify-content: center;
 
 	&:has(.loader__card),
@@ -45,6 +44,10 @@ ul {
 		grid-template-columns: repeat(auto-fill, minmax(322px, 1fr));
 		justify-items: center;
 		gap: 102px 10px;
+	}
+
+	&:has(.error) {
+		align-content: center;
 	}
 
 	& .error {

@@ -6,6 +6,8 @@ export const state = {
 	page: 1,
 	pagesCount: 1,
 	resultsPerPage: RESULTS_PER_PAGE,
+	filters: [],
+	filteredResults: [],
 };
 
 export async function loadPokemonData(query = "") {
@@ -26,13 +28,13 @@ export async function loadPokemonData(query = "") {
 	}
 }
 
-export function getPokemonData(page = state.page) {
+export function getPokemonData(page = state.page, data = state.results) {
 	state.page = page;
 
 	const start = (page - 1) * state.resultsPerPage;
 	const end = page * state.resultsPerPage;
 
-	return state.results.slice(start, end);
+	return data.slice(start, end);
 }
 
 export function sortPokemonData(criteria) {
@@ -49,4 +51,21 @@ export function sortPokemonData(criteria) {
 		case "descending":
 			return state.results.sort((a, b) => b.name[0].localeCompare(a.name[0]));
 	}
+}
+
+export function filterPokemonData(filters) {
+	state.page = 1;
+	state.pagesCount = 1;
+
+	if (filters.length === 0) {
+		state.filteredResults = [...state.results];
+	} else {
+		state.filters = filters;
+
+		state.filteredResults = state.results.filter((result) =>
+			result.types.some((type) => filters.includes(type.toLowerCase())),
+		);
+	}
+
+	state.pagesCount = Math.ceil(state.filteredResults.length / state.resultsPerPage);
 }

@@ -4,6 +4,7 @@ import mainView from "./views/mainView.js";
 import paginationView from "./views/paginationView.js";
 import searchView from "./views/searchView.js";
 import sortView from "./views/sortView.js";
+import filterView from "./views/filterView.js";
 
 async function controlMain() {
 	try {
@@ -63,11 +64,22 @@ function controlSort(criteria) {
 	paginationView.render(model.state);
 }
 
+function controlFilter(filters) {
+	model.filterPokemonData(filters);
+
+	mainView.renderLoader();
+
+	mainView.render(model.getPokemonData(1, model.state.filteredResults));
+
+	paginationView.render(model.state);
+}
+
 function init() {
 	mainView.addHandlerMain(controlMain);
 	paginationView.addHandlerPagination(controlPagination);
 	searchView.addHandlerSearch(controlSearchResults);
 	mainView.addHandlerReload(controlReload);
 	sortView.addHandlerSort(controlSort);
+	filterView.addHandlerFilter(controlFilter);
 }
 init();
