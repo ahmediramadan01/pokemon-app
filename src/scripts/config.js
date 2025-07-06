@@ -1,4 +1,5 @@
 export const API_URL = "https://pokeapi.deno.dev/pokemon";
+export const RESULTS_PER_PAGE = 20;
 
 export const colors = {
 	white: {

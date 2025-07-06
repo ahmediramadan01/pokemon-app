@@ -7,21 +7,21 @@ export default class View {
 
 	renderLoader() {
 		const markup = `
-    ${[1, 2, 3, 4]
-		.map(
-			() => `
-			<div class="loader__card">
-                <div class="loader__image"></div>
-                <div class="loader__name"></div>
-                <div class="loader__id"></div>
-                <div class="loader__types">
-                    <span class="loader__type"></span> 
-                    <span class="loader__type"></span>   
-                </div>
-            </div>
-			`,
-		)
-		.join("")}
+		${[1, 2, 3, 4]
+			.map(
+				() => `
+				<div class="loader__card">
+					<div class="loader__image"></div>
+					<div class="loader__name"></div>
+					<div class="loader__id"></div>
+					<div class="loader__types">
+						<span class="loader__type"></span> 
+						<span class="loader__type"></span>   
+					</div>
+				</div>
+				`,
+			)
+			.join("")}
         `;
 
 		this.#clearParentElement();

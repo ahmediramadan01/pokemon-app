@@ -42,9 +42,9 @@ ul {
 
 	&:has(.loader__card),
 	&:has(.pokemon__card) {
-		grid-template-columns: repeat(4, 1fr);
-
-		gap: 102px 32px;
+		grid-template-columns: repeat(auto-fill, minmax(322px, 1fr));
+		justify-items: center;
+		gap: 102px 10px;
 	}
 
 	& .error {
