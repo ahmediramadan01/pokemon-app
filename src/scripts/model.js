@@ -8,13 +8,17 @@ export const state = {
 	resultsPerPage: RESULTS_PER_PAGE,
 };
 
-export async function loadPokemonData() {
+export async function loadPokemonData(query = "") {
 	try {
+		state.results = [];
 		state.page = 1;
+		state.pagesCount = 1;
 
-		const response = await fetch(API_URL);
+		const response = await fetch(`${API_URL}/${query}`);
 		const data = await response.json();
-		state.results = data;
+
+		if (query) state.results = [data];
+		else state.results = data;
 
 		state.pagesCount = Math.ceil(state.results.length / state.resultsPerPage);
 	} catch (error) {

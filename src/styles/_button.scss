@@ -8,6 +8,7 @@
 	border-radius: 8px;
 	color: $color-dark-blue;
 	@include typography-button;
+	font: inherit;
 
 	&--primary {
 		background-color: $color-blue;

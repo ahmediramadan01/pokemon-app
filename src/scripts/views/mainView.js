@@ -34,6 +34,15 @@ class MainView extends View {
 	addHandlerMain(handler) {
 		window.addEventListener("load", handler);
 	}
+
+	addHandlerReload(handler) {
+		this._parentElement.addEventListener("click", (event) => {
+			const clickedButton = event.target.closest(".error button");
+			if (!clickedButton) return;
+
+			handler();
+		});
+	}
 }
 
 export default new MainView();

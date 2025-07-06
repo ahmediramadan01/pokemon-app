@@ -62,5 +62,9 @@ ul {
 		p {
 			@include typography-body;
 		}
+
+		button {
+			padding: 12px 50px;
+		}
 	}
 }

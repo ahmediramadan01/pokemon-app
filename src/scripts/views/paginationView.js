@@ -41,8 +41,6 @@ class PaginationView extends View {
 			clickedButton.classList.contains("pagination__button--previous")
 				? handler(this._data.page - 1)
 				: handler(this._data.page + 1);
-
-			window.scrollTo({ top: 0, behavior: "smooth" });
 		});
 	}
 }

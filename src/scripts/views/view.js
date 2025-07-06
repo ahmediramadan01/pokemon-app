@@ -34,6 +34,7 @@ export default class View {
         <div class="error">
             <img src=${logo} alt="Logo icon">
             <p>${errorMessage}</p>
+			<button class="button button--outline">Reload</button>
         </div>
         `;
 
