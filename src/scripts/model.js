@@ -34,3 +34,19 @@ export function getPokemonData(page = state.page) {
 
 	return state.results.slice(start, end);
 }
+
+export function sortPokemonData(criteria) {
+	switch (criteria) {
+		case "lowest":
+			return state.results.sort((a, b) => a.id - b.id);
+
+		case "highest":
+			return state.results.sort((a, b) => b.id - a.id);
+
+		case "ascending":
+			return state.results.sort((a, b) => a.name[0].localeCompare(b.name[0]));
+
+		case "descending":
+			return state.results.sort((a, b) => b.name[0].localeCompare(a.name[0]));
+	}
+}

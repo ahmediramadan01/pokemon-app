@@ -3,6 +3,7 @@ import * as model from "./model.js";
 import mainView from "./views/mainView.js";
 import paginationView from "./views/paginationView.js";
 import searchView from "./views/searchView.js";
+import sortView from "./views/sortView.js";
 
 async function controlMain() {
 	try {
@@ -52,10 +53,21 @@ function controlReload() {
 	window.location.reload();
 }
 
+function controlSort(criteria) {
+	mainView.renderLoader();
+
+	model.sortPokemonData(criteria);
+
+	mainView.render(model.getPokemonData(1));
+
+	paginationView.render(model.state);
+}
+
 function init() {
 	mainView.addHandlerMain(controlMain);
 	paginationView.addHandlerPagination(controlPagination);
 	searchView.addHandlerSearch(controlSearchResults);
 	mainView.addHandlerReload(controlReload);
+	sortView.addHandlerSort(controlSort);
 }
 init();
