@@ -43,6 +43,16 @@ class MainView extends View {
 			handler();
 		});
 	}
+
+	addHandlerDetails(handler) {
+		this._parentElement.addEventListener("click", (event) => {
+			if (!event.target.closest(".pokemon__card")) document.querySelector("#details").hidePopover();
+			else {
+				handler(event.target.closest(".pokemon__card").dataset.id);
+				document.querySelector("#details").showPopover();
+			}
+		});
+	}
 }
 
 export default new MainView();

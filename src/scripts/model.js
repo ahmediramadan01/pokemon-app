@@ -8,6 +8,7 @@ export const state = {
 	resultsPerPage: RESULTS_PER_PAGE,
 	filters: [],
 	filteredResults: [],
+	pokemonDetails: {},
 };
 
 export async function loadPokemonData(query = "") {
@@ -68,4 +69,17 @@ export function filterPokemonData(filters) {
 	}
 
 	state.pagesCount = Math.ceil(state.filteredResults.length / state.resultsPerPage);
+}
+
+export async function loadPokemonDetails(id) {
+	try {
+		state.pokemonDetails = {};
+
+		const response = await fetch(`${API_URL}/${id}`);
+		const data = await response.json();
+
+		state.pokemonDetails = data;
+	} catch (error) {
+		throw error;
+	}
 }

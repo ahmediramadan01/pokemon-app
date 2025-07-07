@@ -1,0 +1,152 @@
+@use "./abstracts" as *;
+
+.details {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -250%);
+	width: 725px;
+	height: 698px;
+	border: none;
+	border-radius: 16px;
+	opacity: 0;
+	transition: all 1s allow-discrete;
+	display: flex;
+	flex-direction: column;
+
+	&:popover-open {
+		opacity: 1;
+		transform: translate(-50%, -50%);
+	}
+
+	@starting-style {
+		&:popover-open {
+			opacity: 0;
+			transform: translate(-50%, -250%);
+		}
+	}
+
+	&__header {
+		padding: 32px 42px 52px;
+	}
+
+	&__button {
+		margin-bottom: 6px;
+
+		img {
+			width: 16px;
+			height: 14px;
+		}
+	}
+
+	&__card {
+		display: grid;
+		grid-template-columns: 2fr 3fr;
+		gap: 10px;
+		align-items: center;
+	}
+
+	&__picture {
+		justify-self: end;
+
+		img {
+			width: 180px;
+			height: 180px;
+		}
+	}
+
+	&__id {
+		@include typography-heading-s;
+		margin-bottom: 8px;
+		color: $color-white-80;
+	}
+
+	&__name {
+		@include typography-heading-l;
+		margin-bottom: 18px;
+		color: $color-white;
+	}
+
+	&__types {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	&__type {
+		border-radius: 999px;
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		padding: 8px 12px;
+	}
+
+	&__info {
+		flex-grow: 1;
+		border-radius: 16px;
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: 24px;
+		@include typography-body;
+		color: $color-dark-gray-60;
+		border-bottom: $color-dark-gray-24 solid 1px;
+		padding: 24px 30px 9px;
+	}
+
+	&__item {
+		&--active {
+			color: $color-dark-gray;
+		}
+	}
+
+	&__about,
+	&__stats {
+		padding: 32px 30px;
+		@include typography-heading-s;
+
+		div {
+			display: grid;
+		}
+	}
+
+	&__about {
+		div {
+			grid-template-columns: 1fr 4fr;
+
+			&:not(:last-child) {
+				margin-bottom: 24px;
+			}
+		}
+	}
+
+	&__stats {
+		padding: 32px 30px;
+		@include typography-heading-s;
+
+		div {
+			grid-template-columns: 1fr 3fr;
+			gap: 20px;
+
+			&:not(:last-child) {
+				margin-bottom: 24px;
+			}
+		}
+
+		dd {
+			display: flex;
+			align-items: center;
+			gap: 40px;
+		}
+
+		progress {
+			width: 100%;
+		}
+	}
+
+	&__hidden {
+		display: none;
+	}
+}

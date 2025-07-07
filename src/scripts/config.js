@@ -123,6 +123,7 @@ import ice from "../assets/icons/ice.svg";
 import dragon from "../assets/icons/dragon.svg";
 import dark from "../assets/icons/dark.svg";
 import fairy from "../assets/icons/fairy.svg";
+import arrowBack from "../assets/icons/arrow-back.svg";
 
 export const icons = {
 	normal,
@@ -143,4 +144,5 @@ export const icons = {
 	dragon,
 	dark,
 	fairy,
+	arrowBack,
 };
